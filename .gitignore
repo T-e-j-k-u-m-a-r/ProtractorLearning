@@ -1,0 +1,11 @@
+#Below filesa re ignored during code commit
+
+node_modules
+node_modules_old
+reports-tmp
+Database_test_with_mysql
+tmp
+workspace.code-workspace.*
+conf-copy.*
+package-lock.json
+companySampleFiles/
