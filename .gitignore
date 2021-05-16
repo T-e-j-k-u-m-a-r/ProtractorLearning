@@ -1,4 +1,4 @@
-#Below filesa re ignored during code commit
+#Below files are ignored during code commit
 
 node_modules
 node_modules_old

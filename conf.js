@@ -39,7 +39,7 @@ exports.config = {
   // ],
 
   //How to run single spec file
-  specs: ["explorePH/TC04.js"],
+  specs: ["Locators/HandlingWindowHandles/HandlingAllTypesWindowHandles.js"],
 
   jasmineNodeOpts: {
     defaultTimeoutInterval: 30000,
