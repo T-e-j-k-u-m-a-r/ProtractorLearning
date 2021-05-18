@@ -1,4 +1,3 @@
-const { prototype } = require("jasmine");
 const { browser } = require("protractor");
 
 describe("Mouse Operations", function () {
@@ -11,7 +10,10 @@ describe("Mouse Operations", function () {
     browser.get("http://demo.guru99.com/test/simple_context_menu.html");
     let rightClickButton = element(by.xpath("//span[text()='right click me']"));
 
-    browser.actions().click(rightClickButton, protractor.Button.RIGHT);
+    browser
+      .actions()
+      .click(rightClickButton, protractor.Button.RIGHT)
+      .perform();
     browser.sleep(5000);
   });
 });
