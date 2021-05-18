@@ -16,6 +16,16 @@ exports.config = {
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
     browserName: "chrome",
+    chromeOptions: {
+      //Below option is used to handle allow location share pop up in chrome browser
+      //args: ["--incognito"],
+      //OR Below code also works
+      // prefs: {
+      //   "profile.managed_default_content_settings.notifications": 1,
+      // },
+      //Below option is used to make sure right click is working
+      w3c: false,
+    },
     shardTestFiles: true,
     maxInstances: 1,
   },
@@ -28,7 +38,7 @@ exports.config = {
   //   },
   // },
 
-  waitForAngular: false,
+  //waitForAngular: false
   //How to Run multi spec files at once
   // specs: [
   //   "sampleTests/TC01.js",
@@ -39,18 +49,26 @@ exports.config = {
   // ],
 
   //How to run single spec file
-  specs: ["Locators/HandlingWindowHandles/HandlingAllTypesWindowHandles.js"],
+  specs: ["Locators/MouseAndKeyBoardEvents/TC04.js"],
 
   jasmineNodeOpts: {
-    defaultTimeoutInterval: 30000,
+    defaultTimeoutInterval: 90000,
   },
 
   //Run test on multi browsers at once
-  // multiCapabilities: [{
-  //     browserName: 'firefox'
-  //   }, {
-  //     browserName: 'chrome'
-  //   }]
+  // multiCapabilities: [
+  //   // {
+  //   //   browserName: "firefox",
+  //   // },
+  //   {
+  //     browserName: "chrome",
+  //     chromeOptions: {
+  //       prefs: {
+  //         "profile.managed_default_content_settings.notifications": 1,
+  //       },
+  //     },
+  //   },
+  // ],
 
   //Run test on headless mode
 
