@@ -49,7 +49,7 @@ exports.config = {
   // ],
 
   //How to run single spec file
-  specs: ["Locators/HandlingPosition&Size/TC02.js"],
+  specs: ["toolsQA/MouseOperations/TC01.js"],
 
   jasmineNodeOpts: {
     defaultTimeoutInterval: 90000,
