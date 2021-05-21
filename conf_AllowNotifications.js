@@ -4,13 +4,13 @@ exports.config = {
   capabilities: {
     browserName: "chrome",
     // chromeOptions: {
-    //   //args: ["--incognito"],
-    //   // prefs: {
-    //   //   //Note: The below still induces the Allow notification pop-up
-    //   //   // "profile.managed_default_content_settings.notifications": "Allow",
-    //   //   //Note: The below one works fine
-    //   //   "profile.managed_default_content_settings.notifications": 1,
-    //   // },
+    //args: ["--incognito"],
+    // prefs: {
+    //   //Note: The below still induces the Allow notification pop-up
+    //   // "profile.managed_default_content_settings.notifications": "Allow",
+    //   //Note: The below one works fine
+    //   "profile.managed_default_content_settings.notifications": 1,
+    // },
     // },
   },
 

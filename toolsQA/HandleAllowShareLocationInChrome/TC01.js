@@ -10,7 +10,12 @@ describe("Allow Notifications Pop Up Demo", function () {
 
   it("Type 1 - Going Incognito", function () {
     //click on cancel of notification pop up
-    //The below code should be used only on Incognito mode, Not in type of handling notifications using pref's
+    /*The below code should be used only on Incognito mode, 
+    Note: 
+    If you dont want below popup to appear 
+      use pref's mentioned in the file: conf_AllowNotifications.js
+
+    */
 
     //element(by.xpath('//div[@class = "ic-close-quickview"]')).click();
 
