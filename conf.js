@@ -1,6 +1,6 @@
 let SpecReporter = require("jasmine-spec-reporter").SpecReporter;
 var HtmlReporter = require("protractor-beautiful-reporter");
-const failFast = require("protractor-fail-fast");
+//const failFast = require("protractor-fail-fast");
 
 exports.config = {
   //plugins: [failFast.init()],
@@ -52,7 +52,7 @@ exports.config = {
   // ],
 
   //How to run single spec file
-  specs: ["toolsQA/ImplementingFastFail/TC01.js"],
+  specs: ["toolsQA/ExpectedConditions/TC01.js"],
 
   jasmineNodeOpts: {
     defaultTimeoutInterval: 90000,
