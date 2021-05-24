@@ -52,7 +52,7 @@ exports.config = {
   // ],
 
   //How to run single spec file
-  specs: ["toolsQA/ExpectedConditions/TC01.js"],
+  specs: ["toolsQA/Waits/TC01.js"],
 
   jasmineNodeOpts: {
     defaultTimeoutInterval: 90000,
