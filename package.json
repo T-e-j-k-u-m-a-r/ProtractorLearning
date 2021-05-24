@@ -15,7 +15,8 @@
     "protractor-helper": "4.2.1",
     "html-dnd": "1.2.1",
     "moment": "2.29.1",
-    "protractor-fail-fast": "3.1.0"
+    "protractor-fail-fast": "3.1.0",
+    "casual": "1.6.2"
   },
   "scripts": {
     "test": "protractor conf.js",

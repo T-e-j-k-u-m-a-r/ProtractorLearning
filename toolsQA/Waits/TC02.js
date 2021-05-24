@@ -9,6 +9,10 @@ describe("Handling Waits", function () {
   });
 
   it("Waits Demo", async function () {
+    await browser.getTitle().then(function (title) {
+      console.log(`Application Title :: ${title}`);
+    });
+
     await element(by.id("timerAlertButton"));
 
     //protractorHelper.
