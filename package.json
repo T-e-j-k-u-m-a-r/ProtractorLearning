@@ -21,5 +21,10 @@
   "scripts": {
     "test": "protractor conf.js",
     "posttest": "allure generate allure-results --clean -o allure-report || true"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "broken-link-checker": "^0.7.8",
+    "chalk": "^4.1.1"
   }
 }
