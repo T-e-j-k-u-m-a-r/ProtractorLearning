@@ -1,7 +1,7 @@
 const axios = require("axios");
 const chalk = require("chalk");
 
-describe("GET Request Demo", function () {
+describe(chalk.yellow("GET Request Demo"), function () {
   it(chalk.magenta("Try 1"), function () {
     axios
       .get("https://reqres.in/api/users/2")

@@ -8,6 +8,14 @@ exports.config = {
   directconnect: true,
   framework: "jasmine",
 
+  /*Note: 
+  As Selenium 4 doesn't support WBJS control flow,
+  Now there should be different mechanism that needs to be adopted for handling promises in Protractor
+  So, We should disable promise handling by WebDriverJS by using below command
+  */
+
+  SELENIUM_PROMISE_MANAGER: false,
+
   //How to disable/skip certain tests from execution
   // exclude: [
   //   "sampleTests/TC01.js",
@@ -20,6 +28,8 @@ exports.config = {
   capabilities: {
     browserName: "chrome",
     chromeOptions: {
+      //Show FPS data
+      args: ["show-fps-counter=true"],
       //Below option is used to handle allow location share pop up in chrome browser
       //args: ["--incognito"],
       //OR Below code also works
@@ -52,7 +62,8 @@ exports.config = {
   // ],
 
   //How to run single spec file
-  specs: ["toolsQA/Find_Total_Internal_External_Links/TC01.js"],
+  //specs: ["toolsQA/Find_Total_Internal_External_Links/TC01.js"],
+  specs: ["toolsQA/Async_Nature_Of_JS/TC01.js"],
 
   jasmineNodeOpts: {
     defaultTimeoutInterval: 90000,

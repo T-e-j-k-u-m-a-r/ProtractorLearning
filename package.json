@@ -19,8 +19,9 @@
     "casual": "1.6.2"
   },
   "scripts": {
-    "test": "protractor conf.js",
-    "posttest": "allure generate allure-results --clean -o allure-report || true"
+    "pretest":"webdriver-manager update",
+    "test": "protractor conf.js"
+    
   },
   "dependencies": {
     "axios": "^0.21.1",

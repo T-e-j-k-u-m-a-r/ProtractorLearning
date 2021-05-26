@@ -2,81 +2,83 @@ const { browser, element, by } = require("protractor");
 const pH = require("protractor-helper");
 
 describe("Handling Alerts", function () {
-  beforeAll(function () {
-    browser.waitForAngularEnabled(false);
-    browser.manage().window().maximize();
+  beforeAll(async function () {
+    await browser.waitForAngularEnabled(false);
+    await browser.manage().window().maximize();
   });
 
-  it("Handling all types of alerts", function () {
-    browser.get("https://demoqa.com/alerts");
+  it("Handling all types of alerts", async function () {
+    await browser.get("https://demoqa.com/alerts");
 
-    let simpleAlertButton = element(by.id("alertButton"));
-    let timerAlertButton = element(by.id("timerAlertButton"));
-    let confirmAlertButton = element(by.id("confirmButton"));
-    let promptAlertButton = element(by.id("promtButton"));
+    let simpleAlertButton = await element(by.id("alertButton"));
+    let timerAlertButton = await element(by.id("timerAlertButton"));
+    let confirmAlertButton = await element(by.id("confirmButton"));
+    let promptAlertButton = await element(by.id("promtButton"));
+    let ec = browser.ExpectedConditions;
 
     //Simple Alert Section
-    simpleAlertButton.click();
-    browser.sleep(3000);
+    await simpleAlertButton.click();
+    await browser.sleep(3000);
 
-    pH.waitForAlertToBePresent();
+    await pH.waitForAlertToBePresent();
 
-    let simpleAlert = browser.switchTo().alert();
+    let simpleAlert = await browser.switchTo().alert();
 
-    simpleAlert.getText().then(function (txt) {
+    await simpleAlert.getText().then(function (txt) {
       console.log("Simple Alert Message :: " + txt);
     });
 
-    simpleAlert.accept();
+    await simpleAlert.accept();
 
     //Timer Alert Section
-    pH.click(timerAlertButton);
-    pH.waitForAlertToBePresent(6000);
+    await pH.click(timerAlertButton);
+    await browser.wait(ec.alertIsPresent(10000));
+    await browser.sleep(3000);
 
-    let timerAlert = browser.switchTo().alert();
+    let timerAlert = await browser.switchTo().alert();
 
-    timerAlert.getText().then(function (txt) {
+    await timerAlert.getText().then(function (txt) {
       console.log("Timer Alert Message :: " + txt);
     });
 
-    timerAlert.accept();
-    browser.navigate().refresh();
-    browser.sleep(3000);
+    await timerAlert.accept();
+    await browser.navigate().refresh();
+    await browser.sleep(3000);
 
     //Confirm Alert Section
-    confirmAlertButton.click();
-    browser.sleep(3000);
+    await confirmAlertButton.click();
+    await browser.sleep(3000);
 
-    pH.waitForAlertToBePresent();
+    await pH.waitForAlertToBePresent();
 
-    let confirmAlert = browser.switchTo().alert();
+    let confirmAlert = await browser.switchTo().alert();
 
-    confirmAlert.getText().then(function (txt) {
+    await confirmAlert.getText().then(function (txt) {
       console.log("Confirm Alert Message :: " + txt);
     });
 
-    confirmAlert.accept();
+    await confirmAlert.accept();
 
-    element(by.id("confirmResult"))
+    await element(by.id("confirmResult"))
       .getText()
       .then(function (txt) {
         console.log("Confirmation message :: " + txt);
       });
 
     //Prompt Alert section
-    promptAlertButton.click();
-    browser.sleep(3000);
+    await promptAlertButton.click();
+    await browser.sleep(3000);
 
-    let promptAlert = browser.switchTo().alert();
+    let promptAlert = await browser.switchTo().alert();
 
-    promptAlert.getText().then(function (txt) {
+    await promptAlert.getText().then(function (txt) {
       console.log("Prompt Alert Message ::" + txt);
     });
 
-    promptAlert.sendKeys("Protrctor Testing");
-    promptAlert.accept();
+    await promptAlert.sendKeys("Protrctor Testing");
+    await promptAlert.accept();
 
-    element(by.id("promptResult"))
+    await element(by.id("promptResult"))
       .getText()
       .then(function (txt) {
         console.log("Prompt Alert Confirmation message :: " + txt);
