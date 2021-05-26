@@ -19,7 +19,7 @@
     "casual": "1.6.2"
   },
   "scripts": {
-    "update":"webdriver-manager update",
+    "pretest":"webdriver-manager update",
     "test": "protractor conf.js",
     "posttest": "allure generate allure-results --clean -o allure-report || true"
   },
