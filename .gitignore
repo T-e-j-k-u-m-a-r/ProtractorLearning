@@ -1,7 +1,6 @@
 #Below files & folders are ignored during code commit
 
 node_modules/
-node_modules_backup/
 .gitignore
 reports-tmp
 Database_test_with_mysql

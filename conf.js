@@ -58,12 +58,12 @@ exports.config = {
   //   "sampleTests/TC02.js",
   //   "sampleTests/TC03.js",
   //   "sampleTests/TC04.js",
-  //   "sampleTests/TestBothAngularNOnAngular.js",
+  //   "sampleTests/TestBothAngularNOnAngula.js",
   // ],
 
   //How to run single spec file
   //specs: ["toolsQA/Find_Total_Internal_External_Links/TC01.js"],
-  specs: ["toolsQA/Async_Nature_Of_JS/TC01.js"],
+  specs: ["toolsQA/allSpecs/Async_Nature_Of_JS/TC01.js"],
 
   jasmineNodeOpts: {
     defaultTimeoutInterval: 90000,
