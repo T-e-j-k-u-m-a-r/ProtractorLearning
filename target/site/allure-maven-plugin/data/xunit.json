@@ -1,0 +1,38 @@
+{
+  "time" : {
+    "start" : 1622122083307,
+    "stop" : 1622122105813,
+    "duration" : 22506
+  },
+  "testSuites" : [ {
+    "uid" : "5c62904604b58943",
+    "name" : "Handling Alerts",
+    "title" : "Handling Alerts",
+    "time" : {
+      "start" : 1622122083307,
+      "stop" : 1622122105813,
+      "duration" : 22506
+    },
+    "statistic" : {
+      "total" : 1,
+      "passed" : 1,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 0,
+      "broken" : 0
+    },
+    "description" : null,
+    "testCases" : [ {
+      "uid" : "8d5b0dc1636c3afc",
+      "name" : "Handling all types of alerts",
+      "title" : "Handling all types of alerts",
+      "time" : {
+        "start" : 1622122083307,
+        "stop" : 1622122105813,
+        "duration" : 22506
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    } ]
+  } ]
+}

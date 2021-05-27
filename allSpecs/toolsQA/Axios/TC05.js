@@ -11,7 +11,7 @@ describe("Validate Broken or Dead link in an Web App", function () {
   beforeAll(async function () {
     await browser.manage().window().maximize();
 
-    //Note: Enable the bleow link only for non-angular type web app's
+    //Note: Enable the below link only for non-angular type web app's
     await browser.waitForAngularEnabled(false);
     await browser.get("http://demo.guru99.com/test/newtours/");
   });

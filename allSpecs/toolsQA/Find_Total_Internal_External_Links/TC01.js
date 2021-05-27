@@ -11,16 +11,26 @@ describe("Validate Broken or Dead link in an Web App", function () {
   beforeAll(async function () {
     await browser.manage().window().maximize();
 
-    //Note: Enable the bleow link only for non-angular type web app's
+    //Note: Enable the below link only for non-angular type web app's
     await browser.waitForAngularEnabled(false);
     await browser.get("http://demo.guru99.com/test/newtours/");
   });
 
   it("Print total links", async function () {
     let allLinks = element.all(by.xpath("//a"));
+
     await allLinks.count().then(function (cnt) {
       console.log(`Total links :: ${cnt}`);
     });
+
+    //Print the browser logs
+    // await browser
+    //   .manage()
+    //   .logs()
+    //   .get("browser")
+    //   .then(function (log) {
+    //     console.log("LOG :: " + require("util").inspect(log));
+    //   });
   });
 
   it("Calculate total internal and external links", async function () {

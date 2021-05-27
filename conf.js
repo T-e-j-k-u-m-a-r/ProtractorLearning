@@ -3,6 +3,8 @@ var HtmlReporter = require("protractor-beautiful-reporter");
 //const failFast = require("protractor-fail-fast");
 
 exports.config = {
+
+  
   //plugins: [failFast.init()],
 
   directconnect: true,
@@ -29,7 +31,7 @@ exports.config = {
     browserName: "chrome",
     chromeOptions: {
       //Show FPS data
-      args: ["show-fps-counter=true"],
+      //args: ["show-fps-counter=true"],
       //Below option is used to handle allow location share pop up in chrome browser
       //args: ["--incognito"],
       //OR Below code also works
@@ -58,12 +60,12 @@ exports.config = {
   //   "sampleTests/TC02.js",
   //   "sampleTests/TC03.js",
   //   "sampleTests/TC04.js",
-  //   "sampleTests/TestBothAngularNOnAngula.js",
+  //   "sampleTests/TestBothAngularNOnAngular.js",
   // ],
 
   //How to run single spec file
   //specs: ["toolsQA/Find_Total_Internal_External_Links/TC01.js"],
-  specs: ["toolsQA/allSpecs/Async_Nature_Of_JS/TC01.js"],
+  specs: ["allSpecs/toolsQA/Axios/TC01*.js"],
 
   jasmineNodeOpts: {
     defaultTimeoutInterval: 90000,
@@ -90,7 +92,9 @@ exports.config = {
 
   //OnPrepare Block
   onPrepare: function () {
-    //To print total duration of the automation run for protractor-beatutiful reporter
+
+   
+    //To print total duration of the automation run for protractor-beautiful reporter
     const startTime = new Date();
     // Add a screenshot reporter:
     jasmine.getEnv().addReporter(
@@ -109,6 +113,11 @@ exports.config = {
       new SpecReporter({
         spec: {
           displayStacktrace: true,
+        },
+        prefixes: {
+          success: "✔️",
+          failure: "❌",
+          pending: "🚧",
         },
       })
     );
@@ -147,7 +156,7 @@ exports.config = {
   },
 
   afterLaunch: () => {
-    // console.log("After launch block....");
+    console.log("After launch block....");
     //failFast.clean();
   },
 };

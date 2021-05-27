@@ -13,7 +13,7 @@ describe("Handling Date Picker", function () {
     );
     browser.sleep(2000);
 
-    //Login to Organge HRM
+    //Login to Orange HRM
     element(by.id("txtUsername")).sendKeys("Admin");
     element(by.id("txtPassword")).sendKeys("admin123");
     element(by.id("btnLogin")).click();

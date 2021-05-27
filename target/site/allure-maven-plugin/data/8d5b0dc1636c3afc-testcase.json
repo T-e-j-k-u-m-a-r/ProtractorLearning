@@ -1,0 +1,35 @@
+{
+  "uid" : "8d5b0dc1636c3afc",
+  "name" : "Handling all types of alerts",
+  "title" : "Handling all types of alerts",
+  "time" : {
+    "start" : 1622122083307,
+    "stop" : 1622122105813,
+    "duration" : 22506
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "5c62904604b58943",
+    "name" : "Handling Alerts",
+    "title" : "Handling Alerts"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "Handling Alerts"
+  }, {
+    "name" : "suite-title",
+    "value" : "Handling Alerts"
+  } ],
+  "parameters" : [ ]
+}

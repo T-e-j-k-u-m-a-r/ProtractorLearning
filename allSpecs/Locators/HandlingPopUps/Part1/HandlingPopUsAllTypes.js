@@ -7,6 +7,8 @@ describe("Handling Alerts in JS", () => {
     browser.waitForAngularEnabled(false);
     browser.get("http://demo.automationtesting.in/Register.html");
 
+    
+
     //mhover on switchTo and click on alerts section
     const switchToObj = element(by.linkText("SwitchTo"));
     browser.actions().mouseMove(switchToObj).perform();

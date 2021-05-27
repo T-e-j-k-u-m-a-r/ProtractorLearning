@@ -1,7 +1,31 @@
 const axios = require("axios");
 const chalk = require("chalk");
+const casual = require("casual");
+const moment = require("moment");
 
 describe(chalk.yellow("GET Request Demo"), function () {
+  beforeAll(function () {
+    console.log(
+      "------------------BEFORE ALL BLOCK : STARTS----------------------"
+    );
+
+    console.log("CITY :: " + casual.city);
+    console.log("COUNTRY :: " + casual.country);
+    console.log("COUNTRY CODE :: " + casual.country_code);
+    console.log("COMPANY NAME :: " + casual.company_name);
+    console.log("CARD TYPE :: " + casual.card_type);
+    console.log("CARD NUMBER :: " + casual.card_number());
+    console.log("ARRAY OF WORDS :: " + casual.array_of_words());
+
+    console.log("Current TimeSTAMP >>  " + moment().format("DD MMM YYYY"));
+
+    console.log("ADDRESS :: " + casual._address());
+
+    console.log(
+      "------------------BEFORE ALL BLOCK : ENDS----------------------"
+    );
+  });
+
   it(chalk.magenta("Try 1"), function () {
     axios
       .get("https://reqres.in/api/users/2")
