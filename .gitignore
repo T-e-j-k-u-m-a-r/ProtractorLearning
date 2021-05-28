@@ -9,3 +9,4 @@ workspace.code-workspace.*
 conf-copy.*
 package-lock.json
 companySampleFiles/
+backupFiles/

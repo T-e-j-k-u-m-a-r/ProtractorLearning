@@ -12,7 +12,7 @@ exports.config = {
 
   // Spec patterns are relative to the current working directory when
   // protractor is called.
-  specs: ["toolsQA/Find_Total_Internal_External_Links/TC01.js"],
+  specs: ["LearnProtractor/cssSelectors/TC03.js"],
 
   // Options to be passed to Jasmine.
   jasmineNodeOpts: {

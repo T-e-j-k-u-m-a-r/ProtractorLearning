@@ -4,14 +4,14 @@ var HtmlReporter = require("protractor-beautiful-reporter");
 
 exports.config = {
 
-  
+
   //plugins: [failFast.init()],
 
   directconnect: true,
   framework: "jasmine",
 
   /*Note: 
-  As Selenium 4 doesn't support WBJS control flow,
+  As Selenium 4 WebDriverJS doesn't support  control flow,
   Now there should be different mechanism that needs to be adopted for handling promises in Protractor
   So, We should disable promise handling by WebDriverJS by using below command
   */
@@ -65,7 +65,7 @@ exports.config = {
 
   //How to run single spec file
   //specs: ["toolsQA/Find_Total_Internal_External_Links/TC01.js"],
-  specs: ["allSpecs/toolsQA/Axios/TC01*.js"],
+  specs: ["LearnProtractor/cssSelectors/*.js"],
 
   jasmineNodeOpts: {
     defaultTimeoutInterval: 90000,
@@ -93,7 +93,7 @@ exports.config = {
   //OnPrepare Block
   onPrepare: function () {
 
-   
+
     //To print total duration of the automation run for protractor-beautiful reporter
     const startTime = new Date();
     // Add a screenshot reporter:
@@ -151,12 +151,5 @@ exports.config = {
     //end of onPrepare Function 🦁
   },
 
-  beforeLaunch: function () {
-    console.log("Before launch block....");
-  },
 
-  afterLaunch: () => {
-    console.log("After launch block....");
-    //failFast.clean();
-  },
 };
