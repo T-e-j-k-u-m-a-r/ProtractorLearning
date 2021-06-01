@@ -1,0 +1,13 @@
+/*Today's Topic
+
+1. Class, Functions, Objects
+2. Call one class in one fie on another file
+3. File upload
+4. File download
+5. Read JSON file in test/spec file
+6. Create pageObjects.js for a page/screen containing all global variables & function(or actions)
+    that can be performed on that page/screen
+7. Read pageObjects.js file in test/spec file
+
+
+*/

@@ -1,0 +1,14 @@
+{
+  "signUp": {
+    "fullName": "Peter Parker",
+    "email_id": "tejkumar@kempaiah.com",
+    "telephone": "9945099450",
+    "gender": "",
+    "yearOfExp": "",
+    "skills": "",
+    "automationTool": "",
+    "registrationConfirmationMsg": "Registration Done!",
+    "pageTitle": "Registration Form",
+    "appURl": "https://skpatro.github.io/demo/signup/"
+  }
+}

@@ -65,7 +65,7 @@ exports.config = {
 
   //How to run single spec file
   //specs: ["toolsQA/Find_Total_Internal_External_Links/TC01.js"],
-  specs: ["LearnProtractor/cssSelectors/*.js"],
+  specs: ["Akhil\tests\SignUpFormTest.js"],
 
   jasmineNodeOpts: {
     defaultTimeoutInterval: 90000,
@@ -94,6 +94,7 @@ exports.config = {
   onPrepare: function () {
 
 
+
     //To print total duration of the automation run for protractor-beautiful reporter
     const startTime = new Date();
     // Add a screenshot reporter:
@@ -110,16 +111,17 @@ exports.config = {
     );
 
     jasmine.getEnv().addReporter(
-      new SpecReporter({
-        spec: {
-          displayStacktrace: true,
-        },
-        prefixes: {
-          success: "✔️",
-          failure: "❌",
-          pending: "🚧",
-        },
-      })
+      new SpecReporter(
+        {
+          spec: {
+            displayStacktrace: true,
+          },
+          prefixes: {
+            success: "✔️",
+            failure: "❌",
+            pending: "🚧",
+          },
+        })
     );
 
     // Add a screenshot reporter and store screenshots to `/tmp/screenshots`:
